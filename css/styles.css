@@ -1,0 +1,68 @@
+body {
+	background-color: #fff;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.main {
+  background-color: white;
+  margin: 2em auto 0;
+  padding: 0 100px;
+  min-height: 500px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+}
+
+.prof-league-logos {
+	margin:  0 auto 3em auto;
+	text-align: center;
+	align-items: flex-start;
+}
+
+.prof-teams {
+  padding: 0;
+  margin: 0;
+  width: 400px;
+  height: 200px;
+  list-style: none;    
+}
+
+.indv-teams {
+	width: 200px;
+	height: auto;
+	line-height: 1.5em;
+	text-align: left;
+}
+
+
+.team-listings h1 {
+	text-align: center;
+	font-family: 'Cambay', sans-serif;
+	font-style: italic;
+    font-size: 2.5em;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .team-listings h1 {
+        font-size: 0.9em;
+       }
+
+	.main {
+	        margin: 1em auto 0;
+	    }
+
+    .prof-league-logos img {
+    width: 50%;
+    height: 50%;
+        }
+
+    .prof-league-logos {
+	margin:  0 auto 1em auto;
+        }
+}

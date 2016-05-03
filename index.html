@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shopping Cart Demo</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,600|Cambay:400,700,400italic' rel='stylesheet' type='text/css'>
+<body>
+	<section class="main">
+		<header class="prof-league-logos">
+			<img src="images/sports-nfl-nba-nhl-mlb-team-logos.png" />
+		</header>
+		<section class="team-listings">
+			<h1>Select your favorite professional sports team(s) to start shopping now for the latest gear!</h1>
+			<h2>MLB</h2>
+			<ul class="prof-teams">				
+				<li id="mlb-teams" class="indv-teams2"></li>
+			</ul>
+			<h2>NBA</h2>
+			<ul class="prof-teams">				
+				<li id="nba-teams" class="indv-teams2"></li>
+			</ul>
+			<h2>NHL</h2>
+			<ul class="prof-teams">				
+				<li id="nhl-teams" class="indv-teams2"></li>				
+			</ul>
+			<h2>NFL</h2>
+			<ul class="prof-teams">				
+				<li id="nfl-teams" class="indv-teams2"></li>
+			</ul>
+		</section>
+	</section>
+	<script>
+			var xmlhttp = new XMLHttpRequest();
+			var url = "nflArray.txt";
+
+			xmlhttp.onreadystatechange = function() {
+			    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			        var nflArr = JSON.parse(xmlhttp.responseText);
+			        myFunction(nflArr);
+			    }
+			};
+			xmlhttp.open("GET", url, true);
+			xmlhttp.send();
+
+			function myFunction(arr) {
+			    var out = "";
+			    var i;
+			    for(i = 0; i < arr.length; i++) {
+			        out += arr[i].display + '<br>';
+			    }
+			    document.getElementById("nfl-teams").innerHTML = out;
+			}; 			 
+	</script>
+	
+</body> 
+</html>

@@ -1,0 +1,89 @@
+[
+{
+"display": "Anaheim Ducks"
+},
+{
+"display": "Atlanta Thrashers"
+},
+{
+"display": "Buffalo Sabres"
+},
+{
+"display": "Calgary Flames"
+},
+{
+"display": "Carolina Hurricanes"
+},
+{
+"display": "Chicago Blackhawks"
+},
+{
+"display": "Colorado Avalanche"
+},
+{
+"display": "Columbus Blue Jackets"
+},
+{
+"display": "Dallas Stars"
+},
+{
+"display": "Detroit Red Wings"
+},
+{
+"display": "Edmonton Oilers"
+},
+{
+"display": "Florida Panthers"
+},
+{
+"display": "Los Angeles Kings"
+},
+{
+"display": "Minnesota Wild"
+},
+{
+"display": "Montreal Canadiens"
+},
+{
+"display": "Nashville Predators"
+},
+{
+"display": "New Jersey Devils"
+},
+{
+"display": "New York Islanders"
+},
+{
+"display": "New York Rangers"
+},
+{
+"display": "Ottawa Senators"
+},
+{
+"display": "Philadelphia Flyers"
+},
+{
+"display": "Phoenix Coyotes"
+},
+{
+"display": "Pittsburgh Penguins"
+},
+{
+"display": "St Louis Blues"
+},
+{
+"display": "San Jose Sharks"
+},
+{
+"display": "Tampa Bay Lightning"
+},
+{
+"display": "Toronto Maple Leafs"
+},
+{
+"display": "Vancouver Canucks"
+},
+{
+"display": "Washington Capitals"
+}
+]
