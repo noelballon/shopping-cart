@@ -3,6 +3,10 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+ul {
+	list-style: none;
+}
+
 .main {
   background-color: white;
   margin: 2em auto 0;
@@ -55,9 +59,14 @@ body {
 	text-align: center;	
     font-size: 1.5em;
 }
+ .results {
+ 	width: 200px;
+ 	height: 30px;
+ }
 
 input[type="text"] {
   width: 200px;
+  height: 15px;
   padding: 1em;
   border: solid 2px #cecece;
   transition: box-shadow 0.3s, border 0.3s;
@@ -138,21 +147,56 @@ input[type="text"] {
     filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 
+.removeBtn {
+	background-color: #CA0F0F;
+    color: #fff;
+    border-radius: 2em;
+    border: none;
+    padding: 0.750em;
+    line-height: 1.250em;
+    margin: 0 1em;
+    cursor: pointer;
+}
+
+#items {
+	margin: 1.5em auto;
+    width: 390px;
+    text-align: left;
+    font-weight: 600;
+}
+
+#items span {
+	display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 0.5em;
+    border-radius: 5px;
+    margin: 0.5em auto;
+}
+
 @media only screen and (max-width: 500px) {
-    .team-listings h1 {
-        font-size: 0.9em;
+   .prof-league-logos h1 {
+        font-size: 1em;
        }
 
+    .team-listings h2 {
+     	font-size: 0.9em;
+     }
+
 	.main {
-	        margin: 1em auto 0;
+	     margin: 1em auto 0;
 	    }
 
-    .prof-league-logos img {
-    width: 50%;
-    height: 50%;
+	.btn, input[type="text"] {
+		margin: 0.5em auto;
+	}
+
+    .prof-league-logos img, .btn, input[type="text"] {
+	    width: 50%;
+	    height: 50%;
         }
 
     .prof-league-logos {
-	margin:  0 auto 1em auto;
+		margin:  0 auto 1em auto;
         }
 }
