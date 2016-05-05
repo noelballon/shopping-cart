@@ -68,6 +68,7 @@ input[type="text"] {
   width: 200px;
   height: 15px;
   padding: 1em;
+  margin: 0 1em 1em;
   border: solid 2px #cecece;
   transition: box-shadow 0.3s, border 0.3s;
 }
@@ -80,8 +81,7 @@ input[type="text"] {
 
 .btn {
   width: 120px;
-  height: 45px;
-  margin: 0 0 0 2em;
+  height: 45px;  
   display: inline-block;
   *display: inline;
   font-size: 16px;
@@ -123,14 +123,13 @@ input[type="text"] {
 .btn:hover,
 .btn:focus {
   color: #fff;
+  background-color: #150E80;
   text-decoration: none;
-  background-position: 0 -15px;
-  -webkit-transition: background-position 0.1s linear;
-     -moz-transition: background-position 0.1s linear;
-       -o-transition: background-position 0.1s linear;
-          transition: background-position 0.1s linear;
+   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
-
+ 
 .btn-primary {
     color: #ffffff;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -158,10 +157,14 @@ input[type="text"] {
     cursor: pointer;
 }
 
+.removeBtn:hover {
+	background-color: darkred;
+}
+
 #items {
-	margin: 1.5em auto;
-    width: 390px;
-    text-align: left;
+	margin: 1.5em;
+    width: auto;
+    text-align: center;
     font-weight: 600;
 }
 
@@ -199,4 +202,11 @@ input[type="text"] {
     .prof-league-logos {
 		margin:  0 auto 1em auto;
         }
+
+	#items {
+		margin: 1.5em;
+		width: auto;
+	    text-align: center;
+	    font-weight: 400;
+	}
 }
