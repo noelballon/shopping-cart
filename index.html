@@ -3,8 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Shopping Cart Demo</title>
+	<script src="js/jquery-2.2.3.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/styles.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,600|Cambay:400,700,400italic' rel='stylesheet' type='text/css'>
+</head>
 <body>
 	<section class="main">
 		<header class="prof-league-logos">
@@ -13,8 +16,27 @@
 		</header>
 		<section class="team-listings">
 			<h2>Enter team name you want to shop for:</h2>
-			<input type="text" placeholder="add team here"></input><button class="btn btn-primary">Add</button>
+			<div id="teamshop">
+				<input id="teamname" type="text" />
+				<input id="submit" type="button" class="btn btn-primary" value="Add" />	
+				<div id="items"></div>
+			</div>					
 		</section>
 	</section>	
+	<script>
+	function removeTeam() {
+		$("#teamAdded, .removeBtn").remove();
+		$("br").remove();
+		}  
+	$(document).ready(function(){  
+	  $('#submit').click(function(){
+	    var teamToAdd = $("#teamname").val();
+	    if(teamToAdd!==undefined && teamToAdd.length>0){
+	     var html = "<span id='teamAdded'>" + teamToAdd + "</span>" + "<button class='removeBtn' onClick='removeTeam();'>" + "Remove" + "</button>" + "<br>";
+	      $("#items").append(html);
+	    }
+	  });	 
+	});	 
+	</script>
 </body> 
 </html>
