@@ -32,28 +32,27 @@
 		</section>
 	</section>
 	<script>
-			
-			var xmlhttp2 = new XMLHttpRequest();
-			var url2 = "nhlArray.txt";
+            var xmlhttp = new XMLHttpRequest();
+            var url = "nflArray.txt";
 
-			xmlhttp2.onreadystatechange = function() {
-			    if (xmlhttp2.readyState == 4 && xmlhttp2.status == 200) {
-			        var nhlArr = JSON.parse(xmlhttp2.responseText);
-			        myFunction(nhlArr);
-			    }
-			};
-			xmlhttp.open("GET", url, true);
-			xmlhttp.send();
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    var nflArr = JSON.parse(xmlhttp.responseText);
+                    myFunction(nflArr);
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
 
-			function myFunction(arr2) {
-			    var out = "";
-			    var i;
-			    for(i = 0; i < arr2.length; i++) {
-			        out += arr2[i].display + '<br>';
-			    }
-			    document.getElementById("nhl-teams").innerHTML = out;
-			}; 			  
-	</script>
+            function myFunction(arr) {
+                var out = "";
+                var i;
+                for(i = 0; i < arr.length; i++) {
+                    out += arr[i].display + '<br>';
+                }
+                document.getElementById("nfl-teams").innerHTML = out;
+            };              
+    </script>	
 	
 </body> 
 </html>
