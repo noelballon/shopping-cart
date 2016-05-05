@@ -1,0 +1,98 @@
+[
+{
+"display": "Arizona Cardinals"
+},
+{
+"display": "Atlanta Falcons"
+},
+{
+"display": "Baltimore Ravens"
+},
+{
+"display": "Buffalo Bills"
+},
+{
+"display": "Carolina Panthers"
+},
+{
+"display": "Chicago Bears"
+},
+{
+"display": "Cincinnati Bengals"
+},
+{
+"display": "Cleveland Browns"
+},
+{
+"display": "Dallas Cowboys"
+},
+{
+"display": "Denver Broncos"
+},
+{
+"display": "Detroit Lions"
+},
+{
+"display": "Green Bay Packers"
+},
+{
+"display": "Houston Texans"
+},
+{
+"display": "Indianapolis Colts"
+},
+{
+"display": "Jacksonville Jaguars"
+},
+{
+"display": "Kansas City Chiefs"
+},
+{
+"display": "Miami Dolphins"
+},
+{
+"display": "Minnesota Vikings"
+},
+{
+"display": "New England Patriots"
+},
+{
+"display": "New Orleans Saints"
+},
+{
+"display": "NY Giants"
+},
+{
+"display": "NY Jets"
+},
+{
+"display": "Oakland Raiders"
+},
+{
+"display": "Philadelphia Eagles"
+},
+{
+"display": "Pittsburgh Steelers"
+},
+{
+"display": "San Diego Chargers"
+},
+{
+"display": "San Francisco 49ers"
+},
+{
+"display": "Seattle Seahawks"
+},
+{
+"display": "St Louis Rams"
+},
+{
+"display": "Tampa Bay Buccaneers"
+},
+{
+"display": "Tennessee Titans"
+},
+{
+"display": "Washington Redskins"
+}
+]

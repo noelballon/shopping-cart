@@ -1,0 +1,30 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#king").click(function(){
+    $("#yourname").val(function(i,origText){
+    return "His Royal Highness, King " + origText; 
+    });
+  });
+    $("#queen").click(function(){
+    $("#yourname").val(function(i,origText){
+    return "Her Royal Highness, Queen " + origText; 
+    });
+  });
+    $("#princess").click(function(){
+    $("#yourname").val(function(i,origText){
+    return "Supreme Princess " + origText + " of Rainbow Sparkle Land"; 
+    });
+  });    
+});
+</script>
+</head>
+<body>
+<p>Give yourself a royal title!</p>
+<p>Enter your name: <input type="text" id="yourname" size = "100" > </p>
+<p>Now choose your title:</p>
+<button id="king">King</button>&nbsp; <button id="queen">Queen</button>&nbsp; 
+ <button id = "princess">Princess</button>
+</body>

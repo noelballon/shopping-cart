@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shopping Cart Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="normalize.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,600|Cambay:400,700,400italic' rel='stylesheet' type='text/css'>
+<body>
+	<section class="main">
+		<header class="prof-league-logos">
+			<img src="images/sports-nfl-nba-nhl-mlb-team-logos.png" />
+		</header>
+		<section class="team-listings">
+			<h1>Select your favorite professional sports team(s) to start shopping now for the latest gear!</h1>
+			<ul class="prof-teams">				
+				<li id="mlb-teams" class="indv-teams2"></li>
+			</ul>
+			<ul class="prof-teams">				
+				<li id="nba-teams" class="indv-teams2"></li>
+			</ul>
+			<ul class="prof-teams">				
+				<ul id="nhl-teams" class="indv-teams2"></ul>				
+			</ul>
+			<ul class="prof-teams">				
+				<ul id="nfl-teams" class="indv-teams2"></ul>
+			</ul>
+		</section>
+	</section>
+	<script>
+        $(document).ready(function () {
+            var nflArray = "nflArray.txt";
+            var nhlArray="nhlArray.txt";
+            loadTeams(nflArray, 'nfl-teams');
+            loadTeams(nhlArray, 'nhl-teams');
+        })
+        
+        function loadTeams(filename, ulId) {
+            $.ajax({
+                url: filename,
+                type: 'GET',
+                success: function (data) {
+                    var teams =  JSON.parse(data);
+                    displayTeams(teams, ulId);        
+                }
+            });    
+        }
+        
+        function displayTeams(arr, ulId) {
+            var out = "";
+            for(i = 0; i < arr.length; i++) {
+                out += "<li>" + arr[i].display + "</li>";
+            }
+            $("#" + ulId).append(out);
+        };              
+    </script>	
+	<script src="jquery-2.2.3.js"></script>
+</body> 
+</html>
