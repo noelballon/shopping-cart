@@ -24,19 +24,18 @@
 		</section>
 	</section>	
 	<script>
-	function removeTeam() {
-		$("#teamAdded, .removeBtn").remove();
-		$("br").remove();
-		}  
-	$(document).ready(function(){  
-	  $('#submit').click(function(){
-	    var teamToAdd = $("#teamname").val();
-	    if(teamToAdd!==undefined && teamToAdd.length>0){
-	     var html = "<span id='teamAdded'>" + teamToAdd + "</span>" + "<button class='removeBtn' onClick='removeTeam();'>" + "Remove" + "</button>" + "<br>";
+	$('#submit').on('click',function() {
+    	var teamToAdd = $("#teamname").val();
+    $("#teamname").val('');
+	    if (teamToAdd !== undefined && teamToAdd.length > 0) {
+	      var html = "<div><span class='teamAdded'>" + teamToAdd + "</span>" + '<input type="button" class="removeBtn" value="Remove"></div>';
 	      $("#items").append(html);
 	    }
-	  });	 
-	});	 
+	  });
+	$('#items').on('click', 'input', function (event) {
+	    console.log($(this).prev('span'));
+	    $(this).parent('div').remove();
+	  });
 	</script>
 </body> 
 </html>
