@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shopping Cart Demo</title>
+	<script src="js/jquery-2.2.3.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+<body>
+<form id="myform">
+    <lable name="text">enter text</label>
+    <input id="in" type="text" />
+    <input type="submit" />
+</form>
+
+<div class="results">
+    <ul class="list"></ul>
+</div>
+
+<script>
+(function($){
+    $('#myform').submit(function(e){
+        var val = $(this).find('#in').val();
+        $('ul.list').append('<li>' + val + '</li>');
+        e.preventDefault();
+    });
+});
+</script>
+</body> 
+</html>
